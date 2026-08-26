@@ -22,7 +22,7 @@ The main objective is to determine whether a local, data-driven dynamical model 
 ├── ngrc_boundary_plots/            # Spatio-temporal predictions and error heatmaps
 ├── tenpy_simulation.py             # MPS/TEBD data generator for XX chains
 ├── xxz_delta_simulation.py         # TEBD batch driver across anisotropy parameter Δ
-├── RC-PDE-updated-boundary.py      # Boundary-stabilized local NG-RC trainer and predictor
+├── ng-RC-boundary.py               # Boundary-stabilized local NG-RC trainer and predictor
 ├── xxz_diffusion.py                # MSD extraction and diffusion constant analysis
 ├── .gitignore
 ├── LICENSE
@@ -82,7 +82,7 @@ where:
 
 ## 2. Autoregressive NG-RC Forecasting
 
-### `RC-PDE-updated-boundary.py`
+### `ng-RC-boundary.py`
 
 This script implements the central machine-learning component of the project: a **local, autoregressive Next-Generation Reservoir Computing model**.
 
