@@ -131,12 +131,14 @@ This allows the NG-RC model to distinguish bulk dynamics from boundary dynamics 
 
 ### Stability During Long-Time Rollouts
 
-Autoregressive prediction can accumulate small local errors over many time steps. To improve numerical stability without imposing artificial global conservation laws, the model applies:
+Autoregressive prediction can accumulate small local errors over many time steps. To improve numerical stability during long-time rollouts, the model applies:
 
 * smooth `tanh`-based step bounding,
-* physically motivated range clipping.
+* physically motivated range clipping,
+* global magnetization conservation.
 
-The model enforces the global magnetization conservation.
+The global magnetization is explicitly conserved throughout the autonomous rollout, preventing unphysical drift in the total magnetization while allowing the model to learn the local dynamics from the training data.
+
 ---
 
 ## 3. Transport and Diffusion Analysis
@@ -162,12 +164,12 @@ $$
 \left(j-\mu(t)\right)^2 P_j(t),
 $$
 
-where
+where the center of the distribution is
 
 $$
 \mu(t)
 =
-\sum_{j=0}^{L-1} jP_j(t)
+\sum_{j=0}^{L-1} j\,P_j(t).
 $$
 
 is the center of the distribution.
