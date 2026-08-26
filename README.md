@@ -157,23 +157,19 @@ The analysis focuses on the spatial spreading of excess magnetization.
 
 For a normalized excess magnetization profile $P_j(t)$, the spatial mean squared displacement is computed as:
 
-<div align="center">
-
 $$
-\operatorname{MSD}(t) = \sum_{j=0}^{L-1} \left(j-\mu(t)\right)^2 P_j(t)
+\mathrm{MSD}(t) =
+\sum_{j=0}^{L-1}
+\left(j-\mu(t)\right)^2 P_j(t)
 $$
-
-</div>
 
 where the center of the distribution is:
 
-<div align="center">
-
 $$
-\mu(t) = \sum_{j=0}^{L-1} j P_j(t)
+\mu(t) =
+\sum_{j=0}^{L-1}
+j P_j(t)
 $$
-
-</div>
 
 The MSD quantifies the spreading of the magnetization profile across the spin chain.
 
