@@ -46,7 +46,7 @@ The project consists of three main stages:
 
 ### `tenpy_simulation.py`
 
-Generates reference trajectories for the XX spin chain using Matrix Product States (MPS) and Time-Evolving Block Decimation (TEBD) through TeNPy.
+Generates reference trajectories for the XX spin chain using TEBD through TeNPy.
 
 ### `xxz_delta_simulation.py`
 
@@ -136,14 +136,7 @@ Autoregressive prediction can accumulate small local errors over many time steps
 * smooth `tanh`-based step bounding,
 * physically motivated range clipping.
 
-For local energy density, the prediction is constrained to the range
-
-$$
-h_j \in [-2.5,\,2.5].
-$$
-
-Importantly, the model does **not** explicitly enforce global magnetization or energy conservation. The goal is to evaluate how well the local learned dynamics remain stable and physically meaningful without hard-coded global constraints.
-
+The model enforces the global magnetization conservation.
 ---
 
 ## 3. Transport and Diffusion Analysis
