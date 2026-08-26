@@ -5,13 +5,7 @@ A local **Next-Generation Reservoir Computing (NG-RC)** framework for predicting
 The framework is trained only on short-time **Time-Evolving Block Decimation (TEBD)** simulation data and performs autonomous long-time rollouts of observables including the magnetization density
 
 $$
-\langle \sigma_j^z(t) \rangle
-$$
-
-and the local energy density
-
-$$
-h_j(t).
+\langle \sigma_j^z(t) \rangle.
 $$
 
 The main objective is to determine whether a local, data-driven dynamical model can learn the relevant transport behavior from short-time quantum dynamics and reliably extrapolate it to significantly longer times.
@@ -83,30 +77,6 @@ where:
 
 * **Column 0** contains the simulation time \(t\),
 * **Columns 1 through \(L\)** contain the corresponding observable values at each spatial site.
-
-Depending on the simulation, the spatial observables include quantities such as
-
-$$
-\langle \sigma_j^z(t) \rangle
-$$
-
-and
-
-$$
-h_j(t).
-$$
-
-### Numerical Accuracy
-
-The TEBD simulations use sufficiently large MPS bond dimensions and small time steps to reduce numerical truncation and Trotter errors during long-time evolution. Typical settings satisfy approximately
-
-$$
-\chi_{\max} \geq 256,
-\qquad
-dt \leq 0.05.
-$$
-
-These datasets serve as the ground truth for both NG-RC training and long-time prediction evaluation.
 
 ---
 
@@ -388,33 +358,6 @@ The complete computational pipeline can be summarized as:
                                │  Diffusion D(Δ)  │
                                └──────────────────┘
 ```
-
----
-
-# Requirements
-
-The project dependencies are listed in:
-
-```text
-requirements.txt
-```
-
-The main software stack includes:
-
-* Python
-* NumPy
-* SciPy
-* Matplotlib
-* scikit-learn
-* TeNPy
-
-Install the required dependencies with:
-
-```bash
-pip install -r requirements.txt
-```
-
-> **Note:** TeNPy installation may require a separate installation procedure depending on the platform and Python environment.
 
 ---
 
