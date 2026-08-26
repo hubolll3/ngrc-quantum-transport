@@ -17,17 +17,11 @@ The main objective is to determine whether a local, data-driven dynamical model 
 ```text
 ├── xx_simulation_data/             # Ground-truth TEBD datasets for XX model dynamics
 ├── xxz_simulation_data/            # Ground-truth TEBD datasets for XXZ models across anisotropy Δ
-├── ngrc_boundary_data/             # NG-RC predicted autonomous rollouts (.txt)
-├── diffusion_results_xxz/          # Extracted D(Δ) tables and transport comparison plots
-├── ngrc_boundary_plots/            # Spatio-temporal predictions and error heatmaps
 ├── tenpy_simulation.py             # MPS/TEBD data generator for XX chains
 ├── xxz_delta_simulation.py         # TEBD batch driver across anisotropy parameter Δ
 ├── ng-RC-boundary.py               # Boundary-stabilized local NG-RC trainer and predictor
 ├── xxz_diffusion.py                # MSD extraction and diffusion constant analysis
-├── .gitignore
-├── LICENSE
 ├── README.md
-└── requirements.txt
 ```
 
 ---
