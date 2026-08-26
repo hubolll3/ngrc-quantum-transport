@@ -38,7 +38,7 @@ The project consists of three main stages:
 
 ## 1. Ground-Truth Generation
 
-### `tenpy_simulation.py`
+### `xx_simulation.py`
 
 Generates reference trajectories for the XX spin chain using TEBD through TeNPy.
 
