@@ -153,25 +153,25 @@ The final stage analyzes transport properties of the XXZ dynamics and compares t
 
 The analysis focuses on the spatial spreading of excess magnetization.
 
-Mean Squared Displacement
+### Mean Squared Displacement
 
-For a normalized excess magnetization profile \(P_j(t)\), the spatial mean squared displacement is
+For a normalized excess magnetization profile \(P_j(t)\), the spatial mean squared displacement is computed as:
 
-$$ \operatorname{MSD}(t) = \sum_{j=0}^{L-1} \left(j-\mu(t)\right)^2 P_j(t). $$
+\[
+\operatorname{MSD}(t)
+=
+\sum_{j=0}^{L-1}
+\left(j - \mu(t)\right)^2 P_j(t)
+\]
 
-The center of the distribution is
+where the center of the distribution is:
 
-μ(t)=
-j=0
-∑
-L−1
-	​
-
-jP
-j
-	​
-
-(t).
+\[
+\mu(t)
+=
+\sum_{j=0}^{L-1}
+j\,P_j(t)
+\]
 
 is the center of the distribution.
 
