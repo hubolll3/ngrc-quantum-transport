@@ -101,7 +101,7 @@ Rather than learning the full system as a single global dynamical map, the NG-RC
 For each lattice site, the prediction depends on a finite local neighborhood defined by a spatial stencil. The final architecture uses a stencil radius
 
 $$
-R = 2.
+R = 1.
 $$
 
 This allows the model to learn local transport and interaction patterns while maintaining a scalable representation that does not require a separate global feature space for the entire chain.
